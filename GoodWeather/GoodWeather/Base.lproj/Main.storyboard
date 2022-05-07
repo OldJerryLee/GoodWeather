@@ -25,18 +25,18 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d10-ur-NJH">
-                                            <rect key="frame" x="28" y="46" width="312" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <rect key="frame" x="28" y="46" width="282" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-GQ-zaa">
-                                            <rect key="frame" x="356" y="38.5" width="50" height="39"/>
+                                            <rect key="frame" x="326" y="38.5" width="80" height="39"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="aB6-4i-5wN"/>
+                                                <constraint firstAttribute="width" constant="80" id="aB6-4i-5wN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" systemColor="systemGrayColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -79,10 +79,40 @@
                     <view key="view" contentMode="scaleToFill" id="wgR-Ce-88A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-Wa-wO8">
+                                <rect key="frame" x="16" y="72" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHx-YG-0qd">
+                                <rect key="frame" x="188.5" y="114" width="37" height="30"/>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveCityButtonPressed:" destination="3eo-bS-Cca" eventType="touchUpInside" id="A6h-Hi-mzQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vH2-px-amp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vH2-px-amp" firstAttribute="trailing" secondItem="r7a-Wa-wO8" secondAttribute="trailing" constant="16" id="EQr-Yh-imW"/>
+                            <constraint firstItem="HHx-YG-0qd" firstAttribute="centerX" secondItem="wgR-Ce-88A" secondAttribute="centerX" id="J6H-JV-aHc"/>
+                            <constraint firstItem="r7a-Wa-wO8" firstAttribute="top" secondItem="vH2-px-amp" secondAttribute="top" constant="16" id="TYw-Yo-AIU"/>
+                            <constraint firstItem="HHx-YG-0qd" firstAttribute="top" secondItem="r7a-Wa-wO8" secondAttribute="bottom" constant="8" id="b55-a0-1ri"/>
+                            <constraint firstItem="r7a-Wa-wO8" firstAttribute="leading" secondItem="vH2-px-amp" secondAttribute="leading" constant="16" id="tRr-7K-0ph"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add City" id="j7c-lB-kZQ"/>
+                    <navigationItem key="navigationItem" title="Add City" id="j7c-lB-kZQ">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="WG5-S2-JJL">
+                            <connections>
+                                <action selector="close:" destination="3eo-bS-Cca" id="vNT-XM-XLw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="r7a-Wa-wO8" id="ZSb-CE-sag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqR-fn-Y5D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +158,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
