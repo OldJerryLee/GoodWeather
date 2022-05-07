@@ -11,6 +11,6 @@ class AddWeatherCityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TESTE
+        
     }
 }
