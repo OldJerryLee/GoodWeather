@@ -22,5 +22,10 @@ class WeatherTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    func configure(_ vm: WeatherViewModel) {
+        self.cityNameLabel.text = vm.city
+        self.temperatureLabel.text = "\(vm.temperature.formatAsDegree())"
+    }
     
 }
