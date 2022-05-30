@@ -33,7 +33,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="C47-8s-NVl">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="0hd-GK-1Is"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="0hd-GK-1Is">
+                            <connections>
+                                <action selector="done:" destination="3Ok-Eh-jSH" id="49F-XZ-CSE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQZ-Jp-uyK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -94,7 +98,7 @@
                     <navigationItem key="navigationItem" title="GoodWeather" id="ekV-Rd-XFr">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="gfj-5Q-oZz">
                             <connections>
-                                <segue destination="Geu-t5-5g8" kind="presentation" id="2XX-Cz-Fjh"/>
+                                <segue destination="Geu-t5-5g8" kind="presentation" identifier="SettingsTableViewController" id="2XX-Cz-Fjh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Oqp-A8-Aph">
